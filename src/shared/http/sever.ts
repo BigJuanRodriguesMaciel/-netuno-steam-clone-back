@@ -1,15 +1,15 @@
-//import { Router } from 'express';
-//import express from 'express'
-//import routes from './routes';
+import 'reflect-metadata';
+import express,{ NextFunction, Request, Response } from 'express';
+import 'express-async-errors';
+import cors from 'cors';
+import routes from './routes';
 
-//const app = express();
-//app.use(express.json())
+const app = express();
 
-//app.use(routes)
+app.use(cors());
+app.use(express.json())
 
-//const routes = Router();
-//routes.get('/', (req, res) => {
-//   return res.json("hello world")
-// })
+app.use(routes)
 
-// app.listen(3000)
+
+app.listen(3000)
