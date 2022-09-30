@@ -1,10 +1,9 @@
+import { compare } from 'bcryptjs';
+import { sign } from 'jsonwebtoken';
+import auth from '@config/auth';
+import { getCustomRepository } from 'typeorm';
 import User from '../typeorm/entities/User';
 import UsersRepository from '../typeorm/repositories/UsersRepository';
-import { getCustomRepository } from 'typeorm';
-import { compare, hash } from 'bcryptjs';
-import  auth  from '../../../config/auth'
-import { sign } from 'jsonwebtoken'
-
 interface IRequest {
     name_user: string;
     password: string;
@@ -24,7 +23,7 @@ class CreateSessionsService {
         //     throw new AppError('Incorrect email/password combination', 401);
         // }
 
-        const passwordConfined = await compare(password, user?.password);
+        const passwordConfined = await compare(password, user.password);
 
         // if (!passwordConfined) {
         //     throw new AppError('Incorrect email/password combination', 401);
