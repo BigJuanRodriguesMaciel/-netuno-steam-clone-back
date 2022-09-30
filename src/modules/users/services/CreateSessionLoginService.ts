@@ -7,7 +7,7 @@ import authConfig from "@config/auth";
 import { getCustomRepository } from "typeorm";
 
 interface IRequest {
-  email: string;
+  user_name: string;
   password: string;
 }
 
@@ -17,16 +17,16 @@ interface IResponse {
 }
 
 class CreateSessionLoginService {
-  public async execute({ email, password}: IRequest): Promise<IResponse> {
+  public async execute({ user_name, password}: IRequest): Promise<IResponse> {
     const usersRepository = getCustomRepository(UserRepository);
-    const user = await usersRepository.findByEmail(email);
+    const user = await usersRepository.findByName(user_name);
 
 
-    if (!user) throw new AppError('Incorrect email/password combination', 401);
+    if (!user) throw new AppError('Incorrect user name/password combination', 401);
 
     const passwordConfirmed = await compare(password, user.password);
 
-    if (!passwordConfirmed) throw new AppError('Incorrect email/password combination', 401);
+    if (!passwordConfirmed) throw new AppError('Incorrect user name/password combination', 401);
     
     const token = sign({}, authConfig.jwt.secret, {
       subject: user.id,

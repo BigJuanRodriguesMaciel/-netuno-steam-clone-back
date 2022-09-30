@@ -8,8 +8,9 @@ const sessionsController = new SessionLoginController();
 sessionsRouter.post('/',
 celebrate({
   [Segments.BODY]:{
-    email: Joi.string().email().required(),
-    password: Joi.string().required()
+    user_name: Joi.string().required(),
+    password: Joi.string().required(),
+    password_confirmation: Joi.string().required().valid(Joi.ref('password')),
   },
 }),
 sessionsController.create

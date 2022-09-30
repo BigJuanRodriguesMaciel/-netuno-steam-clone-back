@@ -4,7 +4,7 @@ export class OfertasEspeciais1664556807151 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
       await queryRunner.createTable(new Table({
-        name: "ofertas",
+        name: "games",
         columns: [{
           name: 'id',
           type: 'uuid',
@@ -44,9 +44,14 @@ export class OfertasEspeciais1664556807151 implements MigrationInterface {
         },
         {
           name: 'updated_at',
-          type: 'timesamp',
+          type: 'timestamp with time zone',
           default: 'now()'
-        }
+        },
+        {
+          name: 'created_at',
+          type: 'timestamp with time zone',
+          default: 'now()'
+        },
       ],
       }),
       );
