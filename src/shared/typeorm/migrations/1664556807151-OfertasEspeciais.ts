@@ -42,16 +42,6 @@ export class OfertasEspeciais1664556807151 implements MigrationInterface {
           name: 'platforms',
           type: 'varchar'
         },
-        {
-          name: 'updated_at',
-          type: 'timestamp with time zone',
-          default: 'now()'
-        },
-        {
-          name: 'created_at',
-          type: 'timestamp with time zone',
-          default: 'now()'
-        },
       ],
       }),
       );
