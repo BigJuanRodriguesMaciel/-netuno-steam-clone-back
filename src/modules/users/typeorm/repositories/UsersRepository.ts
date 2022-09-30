@@ -1,5 +1,6 @@
 import { EntityRepository, Repository } from 'typeorm';
 import User from '../entities/User';
+
 @EntityRepository(User)
 class UsersRepository extends Repository<User> {
     public async findByName(name: string): Promise<User | undefined> {
@@ -32,7 +33,7 @@ class UsersRepository extends Repository<User> {
         return user;
     }
 
-     public async findByPassword(password: string): Promise<User | undefined> {
+     public async findByPassword(password: string) {
         const user = await this.findOne({
             where: {
                 password,

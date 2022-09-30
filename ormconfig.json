@@ -3,8 +3,8 @@
   "host": "localhost",
   "port": 5432,
   "username": "postgres",
-  "password": "docker",
-  "database": "apiSteam",
+  "password": "3206",
+  "database": "api_steam",
   "migrations": [
     "src/shared/typeorm/migrations/*ts"
   ],

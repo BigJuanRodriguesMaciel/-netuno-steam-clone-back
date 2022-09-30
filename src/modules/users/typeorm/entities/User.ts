@@ -9,13 +9,13 @@ class User {
     email: string;
 
     @Column()
-    name_user: string;
+    user_name: string;
 
     @Column()
     password: string;
 
     @Column()
-    pais: string;
+    country: string;
 
     @Column()
     avatar: string;
