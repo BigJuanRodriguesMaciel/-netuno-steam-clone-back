@@ -3,10 +3,10 @@ import User from '../entities/User';
 
 @EntityRepository(User)
 class UsersRepository extends Repository<User> {
-    public async findByName(name: string): Promise<User | undefined> {
+    public async findByName(user_name: string): Promise<User | undefined> {
         const user = await this.findOne({
             where: {
-                name,
+                user_name,
             },
         });
 
