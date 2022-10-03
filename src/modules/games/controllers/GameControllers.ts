@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import GamesServices from '../services/GamesServices';
+import CreateGameService from '../services/CreateGameService'
 
 export default class GamesController {
   public async index(request: Request, response:Response): Promise<Response> {
@@ -10,16 +11,20 @@ export default class GamesController {
     return response.json(games)
   }
     public async create(request: Request, response: Response): Promise<Response> {
-    const {name, image, gallery, sub_title, tags, price, platforms  } = request.body;
+    const {game_name, game_image, gallery, sub_title, tags, price, platforms  } = request.body;
 
-    const creatGAmes = new CreateGameService();
+    const creatGames = new CreateGameService();
 
-    const product = await createProduct.execute({
-      name,
+    const games = await  creatGames.execute({
+      game_name,
+      game_image,
+      gallery,
+      sub_title,
+      tags,
       price,
-      quantity,
+      platforms,
     });
 
-    return response.json(product);
+    return response.json(games);
   }
 }
