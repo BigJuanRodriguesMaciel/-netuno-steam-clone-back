@@ -1,24 +1,24 @@
-import User from '../typeorm/entities/User';
-import { getCustomRepository } from 'typeorm';
-import UsersRepository from "@modules/users/typeorm/repositories/UsersRepository";
-import AppError from '@shared/errors/AppError';
+// import User from '../typeorm/entities/User';
+// import { getCustomRepository } from 'typeorm';
+// import UsersRepository from "@modules/users/typeorm/repositories/UsersRepository";
+// import AppError from '@shared/errors/AppError';
 
-interface IRequest {
-    id: string;
-} 
+// interface IRequest {
+//     id: string;
+// } 
 
-class ShowUserService {
-    public async execute({id}: IRequest): Promise<User> {
-        const usersRepository = getCustomRepository(UsersRepository);
+// class ShowUserService {
+//     public async execute({id}: IRequest): Promise<User> {
+//         const usersRepository = getCustomRepository(UsersRepository);
 
-        const user = await usersRepository.findOne(id);
+//         const user = await usersRepository.findOne(id);
 
-        if(!user) {
-            throw new AppError('User not found')
-        }
+//         if(!user) {
+//             throw new AppError('User not found')
+//         }
 
-        return user;
-    }
-}
+//         return user;
+//     }
+// }
 
-export default ShowUserService;
+// export default ShowUserService;

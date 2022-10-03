@@ -17,11 +17,13 @@ export class CreateUser1664544293532 implements MigrationInterface {
         {
           name: 'email',
           type: 'varchar',
-          isUnique: true
+          isUnique: true,
+          isNullable: true
         },
         {
           name: 'country',
           type: 'varchar',
+          isNullable: true
         },
         {
           name: 'user_name',
