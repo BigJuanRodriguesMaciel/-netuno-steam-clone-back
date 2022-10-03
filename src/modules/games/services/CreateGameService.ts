@@ -6,7 +6,7 @@ import GamesRepository from "../tyopeorm/repositories/GamesRepository";
 interface IRequest{ // tipar os dados recebidos da request
     game_name: string;
     game_image: string;
-    gallery: string;
+    game_gallery: string;
     sub_title: string;
     tags: string;
     price: number;
@@ -14,18 +14,18 @@ interface IRequest{ // tipar os dados recebidos da request
 }
 
 class CreateGameService{
-    public async execute({name, image, gallery, sub_title, tags, price, platforms }: IRequest ): Promise<Games> {
+    public async execute({game_name, game_image, game_gallery, sub_title, tags, price, platforms }: IRequest ): Promise<Games> {
         const gamesRepository = getCustomRepository(GamesRepository);
-        const gameExists = await gamesRepository.findByName();
+        const gameExists = await gamesRepository.findByName(game_name);
 
         if (gameExists){
             throw new AppError('Jogo ja existente');
         }
 
         const game = gamesRepository.create({
-            name,
-            image,
-            gallery,
+            game_name,
+            game_image,
+            game_gallery,
             sub_title,
             tags,
             price,
