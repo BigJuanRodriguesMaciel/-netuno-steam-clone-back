@@ -6,7 +6,7 @@ import Games from '../entites/Games';
   public async findByName(game_name: string): Promise<Games | undefined> {
     const game = this.findOne({
       where: {
-        name,
+        game_name,
       },
     });
 

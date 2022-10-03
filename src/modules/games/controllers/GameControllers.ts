@@ -10,9 +10,9 @@ export default class GamesController {
     return response.json(games)
   }
     public async create(request: Request, response: Response): Promise<Response> {
-    const { name, price, quantity } = request.body;
+    const {name, image, gallery, sub_title, tags, price, platforms  } = request.body;
 
-    const createProduct = new CreateProductService();
+    const creatGAmes = new CreateGameService();
 
     const product = await createProduct.execute({
       name,
