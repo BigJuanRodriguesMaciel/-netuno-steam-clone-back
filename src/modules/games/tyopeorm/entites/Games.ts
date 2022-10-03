@@ -8,6 +8,16 @@ import {
 
 @Entity('games')
 class Games {
+  findById(name: string) {
+      throw new Error("Method not implemented.");
+  }
+  create(arg0: { name: string; image: string; gallery: string; sub_title: string; tags: string; price: number; platforms: string; }) {
+      throw new Error("Method not implemented.");
+  }
+  save(game: any) {
+      throw new Error("Method not implemented.");
+  }
+  
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
