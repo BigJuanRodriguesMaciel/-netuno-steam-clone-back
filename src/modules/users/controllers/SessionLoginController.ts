@@ -11,6 +11,9 @@ export default class SessionLoginController {
       user_name,
       password
     });
+
+    // console.log(user,"user");
+
     return res.json(user);
   }
 }
