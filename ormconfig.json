@@ -2,7 +2,7 @@
   "type": "postgres",
   "host": "localhost",
   "port": 5432,
-  "username": "postges",
+  "username": "postgres",
   "password": "docker",
   "database": "api_steam",
   "entities": ["./src/modules/**/typeorm/entities/*.ts"],
