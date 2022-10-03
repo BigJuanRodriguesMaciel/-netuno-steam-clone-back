@@ -1,6 +1,6 @@
+import Games from "../tyopeorm/entites/Games";
 import AppError from "@shared/errors/AppError";
 import { getCustomRepository } from "typeorm";
-import Games from "../tyopeorm/entites/Games";
 import GamesRepository from "../tyopeorm/repositories/GamesRepository";
 
 interface IRequest{ // tipar os dados recebidos da request
@@ -31,7 +31,7 @@ class CreateGameService{
             price,
             platforms,
         });
-
+        console.log(game);
         await gamesRepository.save(game);
 
         return game;
