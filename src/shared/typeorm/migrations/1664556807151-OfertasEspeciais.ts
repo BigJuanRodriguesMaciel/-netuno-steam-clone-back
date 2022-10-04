@@ -49,7 +49,7 @@ export class OfertasEspeciais1664556807151 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-      await queryRunner.dropTable('user')
+      await queryRunner.dropTable('games')
     }
 
 }
