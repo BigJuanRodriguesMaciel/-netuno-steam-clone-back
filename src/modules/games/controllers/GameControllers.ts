@@ -34,13 +34,5 @@ export default class GamesController {
     return response.json(games);
   }
 
-  // public async ListGamesFree(req: Request, res: Response): Promise<Response> {
-  //   const { tag_type } = req.params;
-  //   const listGame = new ListGamesServices();
-
-  //   const games = await listGame.listFree({ tag_type });
-
-  //   return res.json(games);
-  // }
-
+  //teste
 }

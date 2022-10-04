@@ -36,3 +36,4 @@ public async findByTagName(tag_type: string): Promise<Games[]> {
 }
 
 export default GamesRepository
+//teste

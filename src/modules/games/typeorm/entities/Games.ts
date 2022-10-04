@@ -35,4 +35,5 @@ export default class Games {
   @Column()
   tag_type: string;
 }
+//teste
 
