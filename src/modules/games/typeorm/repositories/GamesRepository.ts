@@ -24,7 +24,6 @@ import Games from '../entities/Games';
 }
 
 
-
 }
 
 export default GamesRepository

@@ -43,6 +43,10 @@ export class CreateGames1664894861140 implements MigrationInterface {
           name: 'platforms',
           type: 'varchar'
         },
+        {
+          name: 'tag_type',
+          type: 'varchar'
+        },
       ],
       }),
       );

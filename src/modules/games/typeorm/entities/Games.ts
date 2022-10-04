@@ -31,5 +31,8 @@ export default class Games {
 
   @Column()
   platforms: string;
+
+  @Column()
+  tag_type: string;
 }
 
