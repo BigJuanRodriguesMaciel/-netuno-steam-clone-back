@@ -23,6 +23,16 @@ import Games from '../entities/Games';
     return game;
 }
 
+public async findByTagName(tag_type: string): Promise<Games[]> {
+  const game = this.find({
+    where: {
+      tag_type,
+    },
+  });
+
+  return game;
+}
+
 }
 
 export default GamesRepository

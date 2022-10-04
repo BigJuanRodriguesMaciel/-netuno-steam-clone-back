@@ -5,7 +5,11 @@ const gamesRouter = Router();
 const gamesController = new GamesController();
 
 
-gamesRouter.get('/', gamesController.index);
+gamesRouter.get('/store/:tag_type', gamesController.index);
+// gamesRouter.get('/library/:tag_type');
+
+
+
 gamesRouter.post('/', gamesController.create);
 
 export default gamesRouter;
