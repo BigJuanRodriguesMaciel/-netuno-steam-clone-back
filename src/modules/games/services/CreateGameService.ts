@@ -1,7 +1,7 @@
-import Games from "../tyopeorm/entites/Games";
+import Games from "../typeorm/entities/Games";
 import AppError from "@shared/errors/AppError";
 import { getCustomRepository } from "typeorm";
-import GamesRepository from "../tyopeorm/repositories/GamesRepository";
+import GamesRepository from "../typeorm/repositories/GamesRepository";
 
 interface IRequest{ // tipar os dados recebidos da request
     game_name: string;

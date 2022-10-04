@@ -6,8 +6,8 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity("games")
-class Games {
+@Entity('games')
+export default class Games {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -31,12 +31,5 @@ class Games {
 
   @Column()
   platforms: string;
-
-  @CreateDateColumn()
-  created_at: Date;
-
-  @UpdateDateColumn()
-  updated_at: Date;
 }
 
-export default Games;

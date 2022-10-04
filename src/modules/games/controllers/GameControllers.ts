@@ -1,9 +1,18 @@
 import { Request, Response } from 'express';
 import CreateGameService from '../services/CreateGameService'
+import ListGamesServices from '../services/ListGamesService';
 
 export default class GamesController {
+  public async index(req: Request, res: Response): Promise<Response> {
+    const listGame = new ListGamesServices();
+
+    const games = await listGame.execute();
+
+    return res.json(games);
+  }
+
     public async create(request: Request, response: Response): Promise<Response> {
-    const {game_name, game_image, game_gallery, sub_title, tags, price, platforms  } = request.body;
+    const { game_name, game_image, game_gallery, sub_title, tags, price, platforms  } = request.body;
 
     const createGames = new CreateGameService();
 
