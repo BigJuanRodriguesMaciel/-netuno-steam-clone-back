@@ -1,0 +1,207 @@
+	{
+	"game_name": "The Lords of the Fallen",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Um vasto mundo espera no novo RPG de ação e fantasia sombria, The Lords of the Fallen. Como um dos lendários Cruzadores das Trevas, embarque em uma missão épica para derrotar Adyr, o deus demoníaco.",
+	"tags":[
+		"Um Jogador",
+		"Jogador x Jogador (PvP)",
+		"Enredo Rico",
+		"Aventura",
+		"Fantasia"
+	],
+	"price": "50",
+	"platforms":"Windows"
+	}
+
+	{
+    "game_name": "Little Big Workshop",
+    "game_image": "",
+    "game_gallery": "",
+    "sub_title":"Gerencie seus funcionários, estações, máquinas e crie coisas incríveis à medida que sua pequena grande oficina se transforma na fábrica dos seus sonhos!",
+    "tags":[
+      "Simulação",
+      "Estratégia",
+      "Gerenciamento",
+      "Construção",
+      "Gerenciamento de Recursos"
+    ],
+    "price": "19",
+    "platforms":[
+      "Windows",
+      "macOS"
+    ]
+}
+
+{
+	"game_name": "Streets of Rogue",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Lute, seja sorrateiro e invada seu caminho pelas cidades geradas aleatoriamente. É como se o Nuclear Throne encontrasse o Deus Ex, misturado com a anarquia do GTA. Rogue-lite encontra-se com a simulação imersiva e fica completamente louco.",
+	"tags":[
+		"Roguelite",
+		"RPG",
+		"Roguelike de Ação",
+		"Gráficos Pixelados",
+		"Multijogador"
+	],
+	"price": "9",
+	"platforms":[
+		"Windows",
+    "macOS",
+    "SteamOS + Linux"
+	]
+}
+
+{
+	"game_name": "Little Big Workshop",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Gerencie seus funcionários, estações, máquinas e crie coisas incríveis à medida que sua pequena grande oficina se transforma na fábrica dos seus sonhos!",
+	"tags":[
+		"Construção de Bases",
+		"Casual",
+		"Tático",
+		"Isométrico",
+		"Alta Rejogabilidade"
+	],
+	"price": "9",
+	"platforms":[
+		"Windows",
+    "macOS",
+    "SteamOS + Linux"
+	]
+}
+
+{
+	"game_name": "Little Big Workshop",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Gerencie seus funcionários, estações, máquinas e crie coisas incríveis à medida que sua pequena grande oficina se transforma na fábrica dos seus sonhos!",
+	"tags":[
+		"Simulação",
+		"Estratégia",
+		"Gerenciamento",
+		"Construção",
+		"Gerenciamento de Recursos"
+	],
+	"price": "19",
+	"platforms":[
+		"Windows",
+    "macOS"
+	]
+}
+
+{
+	"game_name": "Kenshi",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Um RPG de deslocamento livre baseado em equipes com fogo em recursos de jogabilidade de mundo aberto em vez de uma história linear. Seja um comerciante, um ladrão, um rebelde, um guerreiro, um aventureiro, um fazendeiro, um escravo ou apenas comida para os canibais.",
+	"tags":[
+		"Mundo Aberto",
+		"Faça o que Quiser",
+		"RPG",
+		"Sobrevivência",
+		"Estratégia"
+	],
+	"price": "28",
+	"platforms":[
+		"Windows"
+	]
+}
+
+
+{
+	"game_name": "Strange Horticulture",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Em Strange Horticulture, você tem uma loja de plantas e resolve enigmas ocultos. Ache e identifique plantas, cuide da sua gata, conheça um conciliábulo ou seita. Suas plantas podem mudar a história e desvendar mistérios sombrios de Undermere",
+	"tags":[
+		"Mistério",
+		"Exploração",
+		"Quebra-Cabeça",
+		"Investigação",
+		"Natureza"
+	],
+	"price": "18",
+	"platforms":[
+		"Windows"
+	]
+}
+
+{
+	"game_name": "Little Nightmares II",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Little Nightmares II é uma aventura de suspense em que se controla Mono, um garoto preso em um mundo que foi distorcido por uma transmissão maligna. Juntamente com sua amiga, Six, ele começa uma jornada para descobrir a fonte da Transmissão.",
+	"tags":[
+		"Terror",
+		"Aventura",
+		"Um Jogador",
+		"Quebra-Cabeça",
+		"Sombrio"
+	],
+	"price": "79",
+	"platforms":[
+		"Windows"
+	]
+}
+
+{
+	"game_name": "Mortal Kombat 11",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Mortal Kombat está de volta, melhor do que nunca, em uma evolução da icônica franquia.",
+	"tags":[
+		"Luta",
+		"Violência Detalhada",
+		"Violento",
+		"Multijogador",
+		"Sangue"
+	],
+	"price": "31",
+	"platforms":[
+		"Windows"
+	]
+}
+
+{
+	"game_name": "Mortal Kombat 11",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Mortal Kombat está de volta, melhor do que nunca, em uma evolução da icônica franquia.",
+	"tags":[
+		"Luta",
+		"Violência Detalhada",
+		"Violento",
+		"Multijogador",
+		"Sangue"
+	],
+	"price": "31",
+	"platforms":[
+		"Windows"
+	]
+}
+
+{
+	"game_name": "Assassin's Creed® Origins",
+	"game_image": "",
+	"game_gallery": "",
+	"sub_title":"Assassin's Creed® ORIGINS É UM NOVO COMEÇO O Antigo Egito, uma terra de grandeza e intriga, está desaparecendo sob um conflito implacável por poder.",
+	"tags":[
+		"Mundo Aberto",
+		"Assassino",
+		"Ação",
+		"RPG",
+		"RPG"
+	],
+	"price": "26",
+	"platforms":[
+		"Windows"
+	]
+}
+
+
+
+
+
