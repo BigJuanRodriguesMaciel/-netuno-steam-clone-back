@@ -1,8 +1,8 @@
-import Games from '../tyopeorm/entites/Games';
+import Games from '../typeorm/entities/Games';
 import { getCustomRepository } from 'typeorm';
-import GamesRepository from '../tyopeorm/repositories/GamesRepository';
+import GamesRepository from '../typeorm/repositories/GamesRepository';
 
-class ListUserService {
+class ListGamesServices {
     public async execute(): Promise<Games[]> {
         const gamesRepository = getCustomRepository(GamesRepository);
 
@@ -12,4 +12,4 @@ class ListUserService {
     }
 }
 
-export default ListUserService;
+export default ListGamesServices;
