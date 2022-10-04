@@ -1,7 +1,7 @@
 import AppError from "@shared/errors/AppError";
 import { getCustomRepository } from "typeorm";
 import Games from "../typeorm/entities/Games";
-import GamesRepository from "../typeorm/entities/Games";
+import GamesRepository from "../typeorm/repositories/GamesRepository";
 
 interface IRequest{ // tipar os dados recebidos da request
     game_name: string;
