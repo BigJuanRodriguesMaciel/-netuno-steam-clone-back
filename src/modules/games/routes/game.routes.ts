@@ -6,7 +6,7 @@ const gamesController = new GamesController();
 
 
 gamesRouter.get('/store/:tag_type', gamesController.index);
-// gamesRouter.get('/library/:tag_type');
+gamesRouter.get('/library/:tag_type', gamesController.list);
 
 //teste
 

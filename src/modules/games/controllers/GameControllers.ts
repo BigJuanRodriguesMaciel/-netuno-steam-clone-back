@@ -12,9 +12,21 @@ export default class GamesController {
     console.log(tag_type)
 
     const games = await listGame.listFree({ tag_type });
-
+    
     return response.json(games);
+    
    }
+   public async list(request: Request, response: Response): Promise<Response> {
+    const listlibrary = new ListGamesServices();
+
+    const { tag_type } = request.params;
+
+    const games = await listlibrary.listFree({ tag_type });
+    
+    return response.json(games);
+    
+   }
+   
     public async create(request: Request, response: Response): Promise<Response> {
     const { game_name, game_image, game_gallery, sub_title, tags, price, platforms, tag_type  } = request.body;
 
