@@ -42,6 +42,7 @@ export default class GamesController {
       platforms,
       tag_type,
     });
+    console.log('games,',games);
     return response.json(games);
   }
 

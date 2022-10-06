@@ -33,6 +33,7 @@ class CreateGameService{
             platforms,
             tag_type
         });
+        console.log('games,',game);
         await gamesRepository.save(game);
 
         return game;
