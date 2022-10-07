@@ -15,7 +15,7 @@ interface IRequest{ // tipar os dados recebidos da request
 }
 
 class CreateGameService{
-    public async execute({ game_name, game_image, game_gallery, sub_title, tags, price, platforms }: IRequest ): Promise<Games> {
+    public async execute({ game_name, game_image, game_gallery, sub_title, tags, price, platforms, tag_type }: IRequest ): Promise<Games> {
         const gamesRepository = getCustomRepository(GamesRepository);
         const gameExists = await gamesRepository.findByName(game_name);
 
@@ -31,6 +31,7 @@ class CreateGameService{
             tags,
             price,
             platforms,
+            tag_type
         });
         await gamesRepository.save(game);
 

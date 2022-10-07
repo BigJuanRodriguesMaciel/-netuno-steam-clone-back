@@ -4,17 +4,17 @@ import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateCol
 class User {
     @PrimaryGeneratedColumn('uuid')
     id: string;
-
+    
     @Column()
     email: string;
 
     @Column()
     country: string;
-
+    
     @Column()
     user_name: string;
-
-    @Column( )
+    
+    @Column()
     password: string;
 
     @Column()
@@ -28,3 +28,4 @@ class User {
 }
 
 export default User;
+

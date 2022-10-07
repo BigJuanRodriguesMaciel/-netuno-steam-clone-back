@@ -21,7 +21,6 @@ class CreateSessionLoginService {
     const usersRepository = getCustomRepository(UserRepository);
     const user = await usersRepository.findByName(user_name);
 
-
     if (!user) throw new AppError('Incorrect user name/password combination', 401);
 
     const passwordConfirmed = await compare(password, user.password);
