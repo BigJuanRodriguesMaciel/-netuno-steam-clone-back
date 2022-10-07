@@ -14,16 +14,17 @@ interface IRequest {
   password: string;
 }
 
-interface IResponse {
-  user?: User,
-  token: string;
-}
+// interface IResponse {
+//   user?: User,
+//   token: string;
+// }
 
 class CreateUserService {
-  public async execute({ email, country, user_name, password }: IRequest): Promise<IResponse> {
+  public async execute({ email, country, user_name, password }: IRequest): Promise<User | undefined> {
     const usersRepository = getCustomRepository(UserRepository);
     const emailExists = await usersRepository.findByEmail(email);
-    
+       const user = await usersRepository.findByName(user_name);
+
     if (emailExists) {
       throw new AppError('Email address already used.');
     }
@@ -36,25 +37,27 @@ class CreateUserService {
       password: hashedPassword,
     });
 
-    const user = await usersRepository.findByName(user_name);
+      await usersRepository.save(userCreated);
+
+      return user;
 
     // const passwordConfirmed = await compare(password, user?.password);
 
     // if (!passwordConfirmed)
     //   throw new AppError('Incorrect user name/password combination', 401);
-    const id = user?.id.toString();
+    // const id = user?.id.toString();
 
-    const token = sign({}, authConfig.jwt.secret, {
-      subject: id,
-      expiresIn: authConfig.jwt.expiresIn,
-    });
+    // const token = sign({}, authConfig.jwt.secret, {
+    //   subject: id,
+    //   expiresIn: authConfig.jwt.expiresIn,
+    // });
      
-    await usersRepository.save(userCreated);
+    
 
-    return {
-      user,
-      token
-    };
+    // return {
+    //   user,
+    //   token
+    // };
   }
 }
 

@@ -7,6 +7,7 @@ const routes  = Router();
 
 routes.use('/games', gamesRouter);
 
+
 routes.use('/users', usersRouter);
 routes.use('/login', sessionLoginRouter);
 
