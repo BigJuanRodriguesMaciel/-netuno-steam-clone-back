@@ -28,7 +28,6 @@ export default function isAuthenticated(
    req.user = {
     id: sub,
    };
-
     return next();
 
    } catch (error) {

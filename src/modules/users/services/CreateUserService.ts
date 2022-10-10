@@ -32,10 +32,9 @@ class CreateUserService {
       user_name,
       password: hashedPassword,
     });
-
       await usersRepository.save(userCreated);
 
-      return user;
+      return userCreated;
 
     // const passwordConfirmed = await compare(password, user?.password);
 
