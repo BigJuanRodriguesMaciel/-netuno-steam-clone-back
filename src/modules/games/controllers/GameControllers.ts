@@ -30,13 +30,7 @@ export default class GamesController {
    
     public async create(request: Request, response: Response) {
     const { game_name, game_image, game_gallery, sub_title, tags, price, platforms, type_availability, availability, tag_type  } = request.body;
-  //   const gameName = getCustomRepository(GamesRepository);
-
-  // const gameNameAlreadyExists = await gameName.find(game_name);
-
-  // if (gameNameAlreadyExists) {
-  //   return ({ message: 'Game Already Exists!'});
-  // }
+  
     const createGames = new CreateGameService();
 
     const games = await  createGames.execute({

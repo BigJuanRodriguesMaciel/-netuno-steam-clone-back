@@ -6,6 +6,7 @@ import validationsGame from '../middlewares/validationsGame';
 const gamesRouter = Router();
 const gamesController = new GamesController();
 
+gamesRouter.use(validationsGame);
 gamesRouter.post('/', gamesController.create);
 
 gamesRouter.use(middleware);

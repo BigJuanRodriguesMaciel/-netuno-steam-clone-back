@@ -43,6 +43,16 @@ class UsersRepository extends Repository<User> {
 
         return user;
     }
+
+    public async findByUserName(user_name: string) {
+      const user = await this.findOne({
+          where: {
+              user_name,
+          },
+      });
+
+      return user;
+  }
 }
 
 export default UsersRepository;
