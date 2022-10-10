@@ -9,26 +9,24 @@ export default class GamesController {
 
     const { tag_type } = request.params;
 
-    console.log(tag_type)
-
     const games = await listGame.listFree({ tag_type });
     
     return response.json(games);
     
    }
    public async list(request: Request, response: Response): Promise<Response> {
-    const listlibrary = new ListGamesServices();
+    const listLibrary = new ListGamesServices();
 
     const { tag_type } = request.params;
 
-    const games = await listlibrary.listFree({ tag_type });
+    const games = await listLibrary.listFree({ tag_type });
     
     return response.json(games);
     
    }
    
     public async create(request: Request, response: Response): Promise<Response> {
-    const { game_name, game_image, game_gallery, sub_title, tags, price, platforms, tag_type  } = request.body;
+    const { game_name, game_image, game_gallery, sub_title, tags, price, platforms, type_availability, availability, tag_type  } = request.body;
 
     const createGames = new CreateGameService();
 
@@ -40,12 +38,12 @@ export default class GamesController {
       tags,
       price,
       platforms,
+      type_availability,
+      availability,
       tag_type,
     });
     
-    console.log(games);
     return response.json(games);
   }
 
-  //teste
 }

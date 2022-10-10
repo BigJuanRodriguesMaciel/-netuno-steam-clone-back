@@ -35,12 +35,18 @@ export class CreateGames1664894861140 implements MigrationInterface {
         },
          {
           name: 'price',
-          type: 'decimal',
-          precision: 10,
-          scale: 2,
+          type: 'varchar'
         },
          {
           name: 'platforms',
+          type: 'varchar'
+        },
+        {
+          name: 'type_availability',
+          type: 'varchar'
+        },
+        {
+          name: 'availability',
           type: 'varchar'
         },
         {

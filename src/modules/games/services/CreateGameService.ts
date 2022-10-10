@@ -3,19 +3,21 @@ import { getCustomRepository } from "typeorm";
 import Games from "../typeorm/entities/Games";
 import GamesRepository from "../typeorm/repositories/GamesRepository";
 
-interface IRequest{ // tipar os dados recebidos da request
+interface IRequest { // tipar os dados recebidos da request
     game_name: string;
     game_image: string;
     game_gallery: string;
     sub_title: string;
     tags: string;
-    price: number;
+    price: string;
     platforms: string;
+    type_availability: string;
+    availability: string;
     tag_type: string;
 }
 
 class CreateGameService{
-    public async execute({ game_name, game_image, game_gallery, sub_title, tags, price, platforms, tag_type }: IRequest ): Promise<Games> {
+    public async execute({ game_name, game_image, game_gallery, sub_title, tags, price, platforms, type_availability, availability, tag_type }: IRequest ): Promise<Games> {
         const gamesRepository = getCustomRepository(GamesRepository);
         const gameExists = await gamesRepository.findByName(game_name);
 
@@ -31,9 +33,10 @@ class CreateGameService{
             tags,
             price,
             platforms,
+            type_availability,
+            availability,
             tag_type
         });
-        console.log('games,',game);
         
         await gamesRepository.save(game);
 

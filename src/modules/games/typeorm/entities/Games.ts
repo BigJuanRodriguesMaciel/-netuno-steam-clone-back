@@ -26,14 +26,19 @@ export default class Games {
   @Column()
   tags: string;
 
-  @Column('decimal')
-  price: number;
+  @Column()
+  price: string;
 
   @Column()
   platforms: string;
 
   @Column()
+  type_availability: string;
+
+  @Column()
+  availability: string;
+
+  @Column()
   tag_type: string;
 }
-//teste
 

@@ -1,12 +1,7 @@
 import User from '../typeorm/entities/User';
 import { getCustomRepository } from 'typeorm';
-<<<<<<< HEAD
 import UserRepository from '@modules/users/typeorm/repositories/UsersRepository';
 import AppError from '@shared/errors/AppError';
-=======
-import UsersRepository from "@modules/users/typeorm/repositories/UsersRepository";
-// import AppError from '@shared/errors/AppError';
->>>>>>> 3ce10b0c14879f470b8fa59f483e4c6e7b4f0c7f
 import { hash } from 'bcryptjs';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
