@@ -10,12 +10,12 @@ interface TokenPayload {
 }
 
 export default function isAuthenticated(
-  req: Request, res: Response, next: NextFunction
-): void {
+  req: Request, res: Response, next: NextFunction)/*: void*/ {
    const authHeader = req.headers.authorization;
 
    if(!authHeader) {
-    throw new AppError('JWT Token is missing.');
+    // throw new AppError('JWT Token is missing.');
+    return res.status(400).json({ message: 'Game Already Exists!'});
    }
 
    const [, token] = authHeader.split(' ');
