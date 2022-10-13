@@ -1,5 +1,6 @@
 import gamesRouter from "@modules/games/routes/game.routes";
 import sessionLoginRouter from "@modules/users/routes/login.routes";
+import passwordRouter from "@modules/users/routes/password.routes";
 import usersRouter from "@modules/users/routes/user.routes";
 
 import { Router } from "express";
@@ -10,6 +11,8 @@ routes.use('/games', gamesRouter);
 
 routes.use('/users', usersRouter);
 routes.use('/login', sessionLoginRouter);
+routes.use('/password', passwordRouter);
+
 
 
 
